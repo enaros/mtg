@@ -1,0 +1,29 @@
+.card
+	background-color: #000
+	width: 260px
+	height: 364px
+	background-size: 250px, 354px
+	background-position: 5px, 5px
+	border-radius: 10px
+	transition: all .5s
+	position: relative
+	-webkit-transform-origin: 50% 64%;
+
+	&.flipped
+		-webkit-transform: rotate(90deg)
+
+	&.together:not(:first-child)
+		margin-left: -230px
+
+.deck
+	background-image: url('/img/Back.full.jpg')
+	box-shadow: 10px 10px #000
+	display: inline-block
+
+.hand 
+	.card
+		display: inline-block
+		margin-right: 10px
+
+		&:nth-child(7n)
+			margin-right: 0
