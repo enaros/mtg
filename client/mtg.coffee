@@ -17,3 +17,6 @@ Template.table.events
   'click .deck': -> 
     Meteor.call 'randomCard', 'US', (error, res) ->
       $('.hand').append(res)
+
+
+Meteor.subscribe "cards" 

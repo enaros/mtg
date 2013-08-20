@@ -11,3 +11,10 @@ Meteor.methods
 		files = fs.readdirSync("public/img/sets/#{set}/")
 		cardName = files[Math.round(Math.random() * files.length)].replace('.full.jpg', '')
 		generateCard(set, cardName)
+
+
+
+# @cards = Meteor.Collection('cards')
+
+Meteor.publish "cards", () ->
+	Meteor.cards.find {}
