@@ -3,15 +3,37 @@
 </head>
 
 <body>
-  {{> table}}
+	{{> menu}} 
+	<div class="meny-arrow"></div>
+	<div class="contents">
+  	{{> table}}
+  </div>
 </body>
 
 <template name="table">
-	<div>
-		<button>test</button>
+	<div id="top"></div>
+	{{> middle}}
+	<div id="bottom">
+		<div class='hand'>
+		</div>
+		<div class='card deck'>
+		</div>
 	</div>
-  <div class='hand'>
-	  <!-- {{{completeSet 'US'}}} -->
-	</div>
-	<div class='card deck'></div>
 </template>
+
+<template name="middle">
+	<div id="middle">
+		<div class="section"></div>
+		<div class="section"></div>
+		<div class="section"></div>
+		<div class="section"></div>
+		<div class="section"></div>
+	</div>
+</template>
+
+<template name="menu">
+	<div class="meny">
+		<input type='file' />
+	</div>
+</template>
+

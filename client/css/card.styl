@@ -1,29 +1,59 @@
+.animate-all
+	transition: all .5s!important
+
 .card
 	background-color: #000
-	width: 260px
-	height: 364px
-	background-size: 250px, 354px
-	background-position: 5px, 5px
+	width: 231px
+	height: 323px
+	background-size: 223px, 329px
+	background-position: 4px, 4px
 	border-radius: 10px
-	transition: all .5s
-	position: relative
-	-webkit-transform-origin: 50% 64%;
+	transition: -webkit-transform .5s
+	position: absolute
+	-webkit-transform-origin: 50% 64%
 
 	&.flipped
 		-webkit-transform: rotate(90deg)
 
-	&.together:not(:first-child)
-		margin-left: -230px
+	&:hover
+		z-index: 2
+
+	&.ui-draggable-dragging
+		background-color: #999!important
+		margin:0!important
 
 .deck
 	background-image: url('/img/Back.full.jpg')
-	box-shadow: 10px 10px #000
+	// box-shadow: 10px 10px #000
 	display: inline-block
+	right: 0
+	position: fixed
 
 .hand 
-	.card
-		display: inline-block
-		margin-right: 10px
+	position: absolute
 
-		&:nth-child(7n)
-			margin-right: 0
+	.card
+		&:nth-child(2)
+			left: 30px
+		&:nth-child(3)
+			left: 60px
+		&:nth-child(4)
+			left: 90px
+		&:nth-child(5)
+			left: 120px
+		&:nth-child(6)
+			left: 150px
+		&:nth-child(7)
+			left: 180px
+		&:nth-child(8)
+			left: 210px
+		&:nth-child(9)
+			left: 240px
+		&:nth-child(10)
+			left: 270px
+
+		.dragged
+			margin:0
+
+		// &:not(:first-child)
+		// 	margin-left: -200px
