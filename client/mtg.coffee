@@ -12,6 +12,8 @@ Handlebars.registerHelper "completeSet", (set) ->
 
 
 Template.table.events
+  'change #top input': (e) -> css_getclass('.card-new img').style.width = $(e.currentTarget).val() + 'px'
+
   'dblclick #middle .card': (e) -> 
     if $(e.currentTarget).is('.dragged')
       $(e.currentTarget).removeClass 'dragged'
